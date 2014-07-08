@@ -29,13 +29,14 @@
 	}
 
 	CBPFWTabs.prototype.options = {
+		nav : 'nav',
 		start : 0,
 		skip : []
 	};
 
 	CBPFWTabs.prototype._init = function() {
 		// tabs elemes
-		this.tabs = [].slice.call( this.el.querySelectorAll( 'nav > ul > li' ) );
+		this.tabs = [].slice.call( this.el.querySelectorAll( this.options.nav + ' > ul > li' ) );
 		// content items
 		this.items = [].slice.call( this.el.querySelectorAll( '.content > section' ) );
 		// current index
