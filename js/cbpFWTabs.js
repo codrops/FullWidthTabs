@@ -29,7 +29,8 @@
 	}
 
 	CBPFWTabs.prototype.options = {
-		start : 0
+		start : 0,
+		skip : []
 	};
 
 	CBPFWTabs.prototype._init = function() {
@@ -47,12 +48,15 @@
 
 	CBPFWTabs.prototype._initEvents = function() {
 		var self = this;
-		this.tabs.forEach( function( tab, idx ) {
-			tab.addEventListener( 'click', function( ev ) {
-				ev.preventDefault();
-				self._show( idx );
-			} );
-		} );
+		var skip = this.options.skip;
+        this.tabs.forEach( function( tab, idx ) {
+            if (skip.indexOf(idx) == -1) {
+                tab.addEventListener( 'click', function( ev ) {
+                    ev.preventDefault();
+                    self._show( idx );
+                } );
+            }
+        } );
 	};
 
 	CBPFWTabs.prototype._show = function( idx ) {
