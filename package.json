@@ -1,0 +1,28 @@
+{
+  "name": "full-width-tabs",
+  "version": "0.0.1",
+  "description": "100% width tabbed content with some example media queries for smaller screens.",
+  "homepage": "https://github.com/codrops/FullWidthTabs",
+  "author": "codrops",
+  "keywords": [
+    "full-width",
+    "tabs"
+  ],
+  "license": "MIT",
+  "main": "js/cbpFWTabs.js",
+  "files": [
+    "css/component.css",
+    "js/cbpFWTabs.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codrops/FullWidthTabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codrops/FullWidthTabs/issues",
+    "email": "info@codrops.com"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
